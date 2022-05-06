@@ -1,5 +1,15 @@
 function fibonacci(num) {
-  // type your code here
+  if (num < 2) {
+    return num
+  }
+  
+  let add = [0,1]
+
+  for (i = 0; i < num -1; ++i){
+    let total = add[0] + add[1]
+    add = [add[1], total]
+  }
+  return add[1]
 }
 
 if (require.main === module) {
@@ -22,3 +32,4 @@ module.exports = fibonacci;
 
 // Please add your pseudocode to this file
 // And a written explanation of your solution
+// find the number in the fibonacci series by the index input
